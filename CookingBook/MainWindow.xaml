@@ -1,0 +1,127 @@
+﻿<Window x:Class="CookingBook.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CookingBook"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Loaded="Window_Loaded"
+        MouseDown="First_Window_MouseDown"
+        >
+
+    <Border
+        BorderThickness="2"
+        Opacity="1">
+
+
+        <Border.BorderBrush>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#FF0B8E79" Offset="0"/>
+                <GradientStop Color="#FFA4DA34" Offset="0.5"/>
+                <GradientStop Color="#FFE6AC0C" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.BorderBrush>
+
+        <!--background styling-->
+        <Border.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#FFF3F5EB" Offset="0.5"/>
+                <GradientStop Color="#FFF3E0C4" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.Background>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0"
+            Orientation="vertical"
+            VerticalAlignment="Top">
+                <Label>
+                    
+                </Label>
+                <Button 
+                Height="85"
+                Width="90"
+                HorizontalAlignment="Right"
+                Name="Home"
+                Click="Home_Click"
+                MouseEnter="Home_MouseEnter"
+                MouseLeave="Home_MouseLeave"
+                    ToolTip="Домашняя Страница">
+
+                    <Button.Content>
+                        <Image Source="/Media/homeIcon.jpg"/>
+                    </Button.Content>
+                </Button>
+
+                <Button Height="85"
+                Width="90"
+                HorizontalAlignment="Right"
+                Name="pervoje"
+                Click="pervoje_Click"
+                MouseEnter="pervoje_MouseEnter"
+                MouseLeave="pervoje_MouseLeave"
+                ToolTip="Закуски и салаты">
+                    <Button.Content>
+                        <Image Source="/Media/saladsIcon.jpg"/>
+                    </Button.Content>
+                </Button>
+                
+                <Button Height="85"
+                Name="vtoroje"
+                Width="90"
+                HorizontalAlignment="Right"
+                Click="vtoroje_Click"
+                MouseEnter="vtoroje_MouseEnter"
+                MouseLeave="vtoroje_MouseLeave"
+                ToolTip="Основные Блюда">
+                    <Button.Content>
+                        <Image Source="/Media/mainCourseIcon.jpg"/>
+                    </Button.Content>
+                </Button>
+                
+                <Button Height="85"
+                Name="deserti"
+                Width="90"
+                HorizontalAlignment="Right"
+                Click="deserti_Click"
+                MouseEnter="deserti_MouseEnter"
+                MouseLeave="deserti_MouseLeave"
+                ToolTip="Дессерты">
+                    <Button.Content>
+                        <Image Source="/Media/dessertsIcon.jpg"/>
+                    </Button.Content>
+                </Button>
+                
+                <Button Height="85"
+                Name="napitki"
+                Width="90"
+                HorizontalAlignment="Right"
+                Click="napitki_Click"
+                MouseEnter="napitki_MouseEnter"
+                MouseLeave="napitki_MouseLeave"
+                ToolTip="Напитки">
+                    <Button.Content>
+                        <Image Source="/Media/drinksIcon.jpg"/>
+                    </Button.Content>
+                </Button>
+
+            </StackPanel>
+            <Frame
+                Margin="0,10,10,10"
+            Grid.Column="1"
+            Name="MainWindowFrame"
+            NavigationUIVisibility="Hidden">
+
+            </Frame>
+        </Grid>
+
+    </Border>
+</Window>
