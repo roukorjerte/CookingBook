@@ -21,6 +21,9 @@ namespace CookingBook.Pages
     public partial class NewPage : Page
         
     {
+        public string headerData;
+        public string recipeMethodData;
+        public string categoryData;
         public NewPage()
         {
             InitializeComponent();
@@ -29,6 +32,17 @@ namespace CookingBook.Pages
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string headerData = recipeHeader.Text;
+            string recipeMethodData = recipeMethod.Text;
+            string categoryData = categoryDropdown.Text;
+
+            DynamicPage dynamicPage = new DynamicPage(headerData, recipeMethodData, categoryData);
+            NavigationService.Navigate(dynamicPage);
+
         }
     }
 }

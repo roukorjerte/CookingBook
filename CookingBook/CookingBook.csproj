@@ -75,6 +75,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\DynamicPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\homePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -98,6 +102,9 @@
     </Compile>
     <Compile Include="Pages\Drinks.xaml.cs">
       <DependentUpon>Drinks.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DynamicPage.xaml.cs">
+      <DependentUpon>DynamicPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\homePage.xaml.cs">
       <DependentUpon>homePage.xaml</DependentUpon>

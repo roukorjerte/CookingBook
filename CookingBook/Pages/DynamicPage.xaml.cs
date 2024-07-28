@@ -20,9 +20,18 @@ namespace CookingBook.Pages
     /// </summary>
     public partial class DynamicPage : Page
     {
-        public DynamicPage()
+        public DynamicPage(string header, string content, string category)
         {
             InitializeComponent();
+            DataContext = header;
+            recipeHeaderDynamic.Text = header;
+            recipeMethodDynamic.Text = content;
+
+
+        }
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }

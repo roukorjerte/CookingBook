@@ -139,6 +139,7 @@
                 Background="Transparent"
                 Text="Добавить описание"
                 Foreground="Gray"
+                
                 >
             </TextBox>
 
@@ -151,7 +152,8 @@
                 VerticalAlignment="Top"
                 HorizontalAlignment="Right"
                 Content="Сохранить"
-                Background="#B76C49">
+                Background="#B76C49"
+                Click="Button_Click">
                 
             </Button>
 
@@ -165,8 +167,25 @@
                   HorizontalAlignment="Center"
                   Content="Отмена"
                   Background="#FFC9B3">
-
             </Button>
+
+            <ComboBox
+                Grid.Row="7"
+                Grid.Column="3"
+                FontSize="15"
+                Width="100"
+                Height="30"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left"
+                Background="#F8AE29"
+                ToolTip="Выберите категорию"
+                Name="categoryDropdown">
+                
+                <ComboBoxItem Content="закуски и салаты" />
+                <ComboBoxItem Content="Основное блюдо" />
+                <ComboBoxItem Content="Дессерт" />
+                <ComboBoxItem Content="Напиток" />
+            </ComboBox>
 
             <!--Image-->
             <Image
