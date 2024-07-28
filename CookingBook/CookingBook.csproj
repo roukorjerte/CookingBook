@@ -79,6 +79,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\NewPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\pervojePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -97,6 +101,9 @@
     </Compile>
     <Compile Include="Pages\homePage.xaml.cs">
       <DependentUpon>homePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\NewPage.xaml.cs">
+      <DependentUpon>NewPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\pervojePage.xaml.cs">
       <DependentUpon>pervojePage.xaml</DependentUpon>

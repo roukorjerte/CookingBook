@@ -16,28 +16,19 @@ using System.Windows.Shapes;
 namespace CookingBook.Pages
 {
     /// <summary>
-    /// Interaction logic for Page1.xaml
+    /// Interaction logic for NewPage.xaml
     /// </summary>
-    public partial class Page1 : Page
+    public partial class NewPage : Page
+        
     {
-
-        public Page1()
+        public NewPage()
         {
             InitializeComponent();
-
         }
 
-
-        //Window closed
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
-        }
-
-
-        private void novoje_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new NewPage());
         }
     }
 }

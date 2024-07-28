@@ -1,4 +1,4 @@
-﻿<Page x:Class="CookingBook.Pages.Page1"
+﻿<Page x:Class="CookingBook.Pages.NewPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,11 +6,7 @@
       xmlns:local="clr-namespace:CookingBook.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Page1"
-      Background="Transparent"
-
-      >
-
+      Title="NewPage">
 
     <Border
         BorderThickness="2"
@@ -39,9 +35,9 @@
                 <RowDefinition Height="20"/>
                 <RowDefinition Height="40"/>
                 <RowDefinition Height="20"/>
+                <RowDefinition Height="50"/>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="50"
                 />
@@ -94,16 +90,84 @@
             </Button>
 
             <!--Header-->
-            <Label
+            <TextBox
                 Grid.ColumnSpan="4"
                 Grid.RowSpan="2"
                 Grid.Row="0"
                 Grid.Column="0"
                 FontSize="40"
                 HorizontalAlignment="Center"
+                x:Name="recipeHeader"
+                Width="500"
+                Background="Transparent"
+                Text="Добавить название"
+                Foreground="Gray"
                 >
-                Книга Рецептов                
+            </TextBox>
+
+            <Label
+              Grid.Row="3"
+              Grid.Column="3"
+              FontSize="20"
+              HorizontalAlignment="Center"
+              VerticalAlignment="Center"
+              Width="350"
+              Background="#5C7728"
+              >
+                Ингридиенты
             </Label>
+
+            <Label
+              Grid.Row="5"
+              Grid.Column="3"
+              FontSize="20"
+              HorizontalAlignment="Center"
+              VerticalAlignment="Center"
+              Width="350"
+              Background="#F8AE29"
+              >         
+                Способ приготовления
+            </Label>
+            
+            <TextBox
+                Grid.Row="6"
+                Grid.Column="3"
+                FontSize="15"
+                HorizontalAlignment="Center"
+                x:Name="recipeMethod"
+                Width="350"
+                Background="Transparent"
+                Text="Добавить описание"
+                Foreground="Gray"
+                >
+            </TextBox>
+
+            <Button
+                Grid.Row="7"
+                Grid.Column="3"
+                FontSize="15"
+                Width="100"
+                Height="30"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Right"
+                Content="Сохранить"
+                Background="#B76C49">
+                
+            </Button>
+
+            <Button
+                  Grid.Row="7"
+                  Grid.Column="3"
+                  FontSize="15"
+                  Width="100"
+                  Height="30"
+                  VerticalAlignment="Top"
+                  HorizontalAlignment="Center"
+                  Content="Отмена"
+                  Background="#FFC9B3">
+
+            </Button>
+
             <!--Image-->
             <Image
                 Grid.Row="3"
@@ -111,50 +175,7 @@
                 Grid.RowSpan="4"
                 Source="/Media/mearImage.jpg">
             </Image>
-            <!--Buttons-->
-
-            <Button
-                Content="Оглавление"
-                Grid.Row="3"
-                Grid.Column="3"
-                FontSize="30"
-                FontFamily="Montserrat"
-                Background="#5C7728"
-                Margin="7">
-            </Button>
-
-            <Button
-                 Content="Добавить новое"
-                 Grid.Row="4"
-                 Grid.Column="3"
-                 FontSize="30"
-                 FontFamily="Montserrat"
-                 Background="#F8AE29"
-                 Margin="7"
-                Name="novoje"
-                Click="novoje_Click"
-                >
-            </Button>
             
-            <Button
-                 Content="Поиск"
-                 Grid.Row="5"
-                 Grid.Column="3"
-                 FontSize="30"
-                 FontFamily="Montserrat"
-                 Background="#FFC9B3"
-                 Margin="7">
-            </Button>
-
-            <Button
-                  Content="Настройки"
-                  Grid.Row="6"
-                  Grid.Column="3"
-                  FontSize="30"
-                  FontFamily="Montserrat"
-                  Background="#B76C49"
-                  Margin="7">
-            </Button>
         </Grid>
     </Border>
 </Page>
